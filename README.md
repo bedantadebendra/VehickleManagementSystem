@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Vehicle Service Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a full-stack web application designed for managing vehicle services, including component registration, repair tracking, issue reporting, and payment simulations. It uses the following tech stack:
 
-## Available Scripts
+- **Frontend**: React.js
+- **Backend**: Django (Django REST Framework)
+- **Database**: SQLite or PostgreSQL
+- **Charts**: Recharts (or any chart library of your choice)
 
-In the project directory, you can run:
+## Features
+1. **Vehicle Registration & Management**: 
+   - Register vehicles with unique identification numbers and details.
+2. **Component Management**:
+   - Manage vehicle components, including their repair and purchase prices.
+3. **Repair Management**:
+   - Track repairs, including vehicle details, issue descriptions, labor costs, and selected components.
+4. **Revenue Graphs**:
+   - Visualize the daily, monthly, and yearly revenue from repairs.
+5. **Simulated Payment System**:
+   - A simulated feature for calculating and handling the repair payment.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- **Django**: Web framework for rapid development and clean, pragmatic design.
+- **Django REST Framework**: For building RESTful APIs.
+- **SQLite/PostgreSQL**: Database options for storing vehicle and repair information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
+- **React.js**: A JavaScript library for building user interfaces.
+- **Material UI**: For styling the frontend components.
 
-### `npm test`
+### Other Libraries
+- **Axios**: For making HTTP requests.
+- **Recharts**: For visualizing repair data in graphs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation Guide
 
-### `npm run build`
+### Prerequisites
+- Python 3.x
+- Node.js & npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Step-by-Step Installation Guide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend Setup (Django)
 
-### `npm run eject`
+1. **Clone the Repository**:
+   - Open a terminal or command prompt.
+   - Clone the repository to your local machine:
+     ```bash
+     git clone https://github.com/your-username/vehicle-service-management.git
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the Backend Directory**:
+   - Change to the backend directory:
+     ```bash
+     cd vehicle-service-management/backend
+     ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Set up a Virtual Environment**:
+   - Create a virtual environment for the Django project:
+     ```bash
+     python -m venv venv
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Activate the Virtual Environment**:
+   - **Windows**:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - **macOS/Linux**:
+     ```bash
+     source venv/bin/activate
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Install the Backend Dependencies**:
+   - Make sure you are in the backend directory and run:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-## Learn More
+6. **Apply Database Migrations**:
+   - Run the database migrations to set up the database schema:
+     ```bash
+     python manage.py migrate
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. **Run the Backend Server**:
+   - Start the Django development server:
+     ```bash
+     python manage.py runserver
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Your backend API will now be running at `http://127.0.0.1:8000/`.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend Setup (React.js)
 
-### Analyzing the Bundle Size
+1. **Navigate to the Frontend Directory**:
+   - Open a new terminal window (or tab) and navigate to the frontend directory:
+     ```bash
+     cd vehicle-service-management/frontend/vehicle-service-management
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Install the Frontend Dependencies**:
+   - Install the necessary dependencies using npm:
+     ```bash
+     npm install
+     ```
 
-### Making a Progressive Web App
+3. **Run the Frontend Development Server**:
+   - Start the React development server:
+     ```bash
+     npm start
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   - The frontend will now be running at `http://localhost:3000/`.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
